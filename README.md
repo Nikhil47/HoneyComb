@@ -23,6 +23,7 @@ The approach is:
 Pros:
  - First, the strings created when the dictionary had been loaded in the memory are never copied again. Same strings are used.
  - Second, the graph is not pre-computed. Nodes required for search are created on the fly.
+ - Third, the merge sort is performed parallely using 26 separate threads for each bucket.
 
 Cons:
  - First, all of the dictionary is loaded into the memory. This can be improved. If the words in the dictionary are longer then
@@ -33,3 +34,6 @@ Cons:
 Solution:
  - First, files might be used to store the results and strings can be read one by one. 'Yield-enumerate' approach from python.
  - Second, a breadth first search with queue needs to be implemented here.
+
+Improvements:
+ - Even the searches can be started in threads.
