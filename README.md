@@ -9,6 +9,7 @@ The task is to efficiently find a given string in the given HoneyComb. The strin
 multiple strings. Each node, once selected in a search can not be reused again. 
 
 Compile: gcc -g honeyComb.c fileFunctions.c arrayList.c combList.c
+
 Run: ./a.out honeycomb.txt dictionary.txt
 
 The approach is:
